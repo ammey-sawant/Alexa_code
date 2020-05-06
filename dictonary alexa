@@ -1,0 +1,65 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Apr 19 17:43:29 2020
+
+@author: VEENA
+"""
+import time
+import pyttsx3
+from PIL import Image
+im1= Image.open(r"C:\Users\VEENA\.spyder-py3\football - Copy\san.png")
+im2= Image.open(r"C:\Users\VEENA\.spyder-py3\football - Copy\in.png")
+im3= Image.open(r"C:\Users\VEENA\.spyder-py3\issac.png")
+im4= Image.open(r"C:\Users\VEENA\.spyder-py3\carl.png")
+engine=pyttsx3.init()
+Googleinformational = {'histroy':['Football is a game which was also play earlier . In 476 BCE , football was invented in china . football was also called Tsu`Chu(Cuju) . During the Han Dynasty(206 BCE - AD 220) , this game have been played . it is played also in japan and other contries . Football was Invented also in Greece , Rome and parts of Centeral America , years later . In 12th century , football was developed in England . On 16th century , an equavalent was played in Florence where it was called Calcio . Earlier , this game was causing damage and death . It would be forbidden again in 1835 , but at this stage the game had  been played in public school and years later , the rules  were  changed .'],
+'football':['Football is a game played in Europe majorly since 476 BC in China'],
+'faf':['(1) Only Canadians and American call football as soccer. (2) Football is the most played sports on Earth . (3) Football was invented in China in 476 BCE'],
+'fifa 07': ['the FIFA World Cup,often simply called the World Cup,is an internation association football competition .'],
+'tm' :['11'],
+'lokmanya':['Born - 23 july 1856 , Ratnagiri . Died - 1 aug 1920 , Bombay . Education - Deecan College(1873 - 1877) , goverment law college(1878 - 1879) , Indian National Congrees(1890 - 1920)']}
+sandic={'Sanskrit':['sanskrit is the indo-aryan language . It is the oldest language of India , since 3500 years ago . There are Sannskrit books , just like Bagvan Gita , Ramayan and Mahabharat .'],
+'aacharya':['A teacher'],
+'kradhit':['kradhit means play . '],
+'sastarat':['A sastarat is a competition between two aacharyas . Which aacharya wins , he gets flowers on his neck , the loser aacharya will drown in the river(also called Jal Samadi)'],
+'Subham Bhuyat':['Subham Bhuyat means (All the best) .']}
+mathans={'1+2':['3'],
+'7/10':['0.7'],
+'per 70/100':['0.70'],
+'90/3':['3'],
+'LCM 12,34':['204'],
+'HCF 24,36':['12']}
+sciencetist={'isaac':['Sir Isaac Newton FRS PRS was an English mathematician, physicist, astronomer, theologian, and author who is widely recognised as one of the most influential scientists of all time, and a key figure in the scientific revolution . en.wikipedia.org . Born: January 4, 1642, Woolsthorpe-by-Colsterworth, Lincolnshire, England . Died: March 31, 1727, Kensington, Middlesex, England . Nationality : British'],
+'carl gauss':['Johann Carl Friedrich  Carolus Fridericus Gauss; (30 April 1777 – 23 February 1855) was a German mathematician and physicist who made significant contributions to many fields in mathematics and sciences.  Sometimes referred to as the Princeps mathematicorum[4] (Latin for the foremost of mathematicians) and the greatest mathematician since antiquity, Gauss had an exceptional influence in many fields of mathematics and science, and is ranked among history`s most influential mathematicians.']}
+unpass='closing'
+imformation=sciencetist
+"""RATE"""
+rate = engine.getProperty('rate')
+engine.setProperty('rate', 125)
+    
+
+"""VOLUME"""
+volume = engine.getProperty('rate')
+engine.setProperty('volume', 2.0)
+
+"""VOICE"""
+voices = engine.getProperty('voices')
+engine.setProperty('voice',voices[0].id)
+while True:
+    try:
+        
+        CognitioAlexa= input("CognitioAlexa :")
+        time.sleep(2)
+        print("Searching ......")
+        time.sleep(4)
+        print ("information : " + str (imformation[CognitioAlexa]))
+        im1.show()
+        engine.say(imformation[CognitioAlexa])
+        engine.runAndWait() 
+        im3.show()
+        im4.show()
+    except :
+        im2.show()
+        print("Invalid information (Password) (closing)")
+        if password== unpass :
+            break
